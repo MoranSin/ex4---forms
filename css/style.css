@@ -1,5 +1,13 @@
-*{margin: 0; padding: 0;};
+main{
+    margin-top: 25px;
+    margin-left: 25px;
+    padding-right: 25px;
+    color: blueviolet;
+    font-size: 18px;
+    font-weight: 400px;
+}
 
-
-
-
+fieldset{
+    font-size: 15px;
+    
+}
