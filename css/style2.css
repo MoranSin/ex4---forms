@@ -1,0 +1,15 @@
+main{
+    font-size: 50px;
+    display: flex;
+    color: brown;
+    margin: 200px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+#wrapper{
+    margin: 0 auto;
+
+}
