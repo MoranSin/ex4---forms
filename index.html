@@ -2,56 +2,228 @@
 <html>
     <head>
         <title>Forms 1</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style2.css">
+        <script src="js/maplestory.js"></script>
+
     </head>
     <body>
         <main>
             <form action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="get" autocomplete="on">
-            Full name: <input type="text" id="fn" name="fullName" class="form-control"> <br>
-            Password: <input type="password" class="form-control" name="pass" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"> <br>
-            Email: <input type="email" class="form-control" name="mail"> <br>
-            Website: <input type="url" class="form-control" name="website"> <br>
-            Phone Number: <input type="tell" id="p" class="form-control" name="phone"> <br>
-            Coffee cups: <input type="number"  class="form-control" name="coffee"> <br>
-            Madness meter: <input type="range" class="form-range" name="temper"> <br>
-            Address: <textarea name="address" class="form-control"></textarea> <br>
-            Interests: <br>
-            <fieldset class="form-control"> 
-                Gaming &nbsp;<input type="checkbox" class="form-check-input"  name="interests[]"  value="video games"> <br>
-                Movies &nbsp;<input type="checkbox" class="form-check-input"  name="interests[]" value="watching movies"> <br>
-                Travel &nbsp;<input type="checkbox" class="form-check-input"  name="interests[]" value="traveling"> <br>
-                Party &nbsp;<input type="checkbox" class="form-check-input"  name="interests[]" value="traveling"> <br>
-                Animals &nbsp;<input type="checkbox" class="form-check-input"  name="interests[]" value="traveling"> <br>
-
-            </fieldset><br>
-            How you indentify as?: <br> <fieldset class="form-control"> Female <input type="radio" class="form-check-input" name="gender" value="female"> &nbsp;
-            Male <input type="radio" class="form-check-input" name="gender" value="Male"> &nbsp;
-            Non-Binary <input type="radio" class="form-check-input" name="gender" value="Non-Binary"></fieldset>
-            <br>
-            Age: <select name="age" class="form-select" required title="need to be filled">
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-                <option value="32">32</option>
-                <option value="33">33</option>
-                <option value="34">34</option>
-                <option value="35">35</option>
-                <option value="36">36</option>
-                <option value="37">37</option>
-                <option value="38">38</option>
-            </select> <br>
+                <div class="login-background-image-area ">
+                    <div class="backgroundImage-container">
+                        <audio id="background-music" autoplay loop> 
+                            <source src="Maplestory Theme Music - Intro.mp3">
+                        </audio>
+                    
+                    
+                        <div class="tabs">
+                            
+                            <input id="all" type="radio" name="tab_item" checked>
+                            <label class="tab_item" for="all">
+                                <img class="maple_leaf_red" src="https://cdn-icons-png.flaticon.com/512/2831/2831965.png " alt="">
+                                <h2>MapleID</h2>
+                            </label>
+                            <input id="programming" type="radio" name="tab_item">
+                            <label class="tab_item" for="programming">
+                                <img class="nexon-logo" src="https://i.esdrop.com/d/f/yRK3Pc5dvM/9McnAKH2SU.png" alt="">
+                                <h2>NexonID </h2>
+                            </label>
+                            <div class="tab_content" id="all_content">
+                                <div class="login-id-pw-area">
+                                    <div class="login-left-area">
+                                        <input type="text" placeholder="Full name" name="fullName" class="id-input-deco" pattern="/^[a-zA-Z]+\s[a-zA-Z]+$/">
+                                        <input type="password" placeholder="Password" name="pass" class="pw-input-deco" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                                    </div>
+                                    <div class="login-right-area">
+                                        <!-- <button class="login-button" onclick="loginProcess()">
+                                        </button> -->
+                            <label class="login-button-font">
+                                <input type="submit" value="LOGIN" class="login-button">
+                            </label>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="idSave-findIdPw">
+                        <div class="idSave_area">
+                            <input type="checkbox" name="interests[]"  value="video games">
+                            <label for="">
+                                <h2>Easy</h2>
+                            </label>
+                        </div>
+                        <div class="findId_area">
+                            <input type="checkbox" name="interests[]"  value="Maple">
+                            <label for="">
+                                <h2>Hard</h2>
+                            </label>
+                        </div>
+                        
+                        <div class="findPw_area">
+                            <input type="checkbox" name="interests[]"  value="Story">
+                            <label for="">
+                                <h2>Pro</h2>
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="join-homepage-exit">
+                    <label class="join-button-font" onclick="popupCreateId()"> Register </label>
+                    
+                    <button class="join-button" onclick="popupCreateId()">
+                    </button>
+                    
+                    
+                    <label class="homepage-button-font" onclick="location.href='https://maplestory.nexon.com/Home/Main'"
+                    for=""> Website </label>
+                    <button class="homepage-button" onclick="location.href='https://maplestory.nexon.com/Home/Main'">
+                    </button>
+                    
+                    
+                    <!-- 3) 끝내기 -->
+                    <label class="exit-button-font" onclick="location.href='https://www.nexon.com/Home/Game'" for="">
+                        Download </label>
+                        <button class="exit-button" onclick="location.href='https://www.nexon.com/Home/Game'">
+                        </button>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
             
-            <input type="submit" class="btn btn-primary" value="click on me!">
-            </form>
+            <div class="popup-user-join-area">
+                <div class="create-userid-area">
+                    <span onclick="popupCreateId()">
+                    </span>
+                    
+                    <div class="userid-title-container">
+                        
+                        <h2 class="userid-title-content">
+                            Welcome!
+                        </h2>
+                        
+                    </div>
+                    <div class="userid-photo-container">
+                        
+                        <div class="userid-photo-content">
+                            <img class="userid-photo-content"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BZreeWepHB5zom6-oYxIpMXbZtTyXU76emGws8vfTj7IcY-IVi1GAlpOqxvTMUEYjHI&usqp=CAU"
+                            alt="">
+                            
+                        </div>
+                        
+                    </div>
+                    <label for="" class="rangeH">Excited?</label>
+                    <input type="range" class="form-range form-input" name="temper"> 
+
+                    <div class="userid-create-container">
+                        <input type="text" placeholder="email" name="mail" class="userid-email">
+                        
+                    </div>
+                    
+                    <div class="userpw-create-container">
+                        <input type="url" placeholder="website" name="website" class="user-pw1-email">
+
+                </div>
+                <div class="userpw-2nd-create-container">
+                    
+                    <input type="tell" placeholder="phone number"  name="phone" pattern="[0-9]+" class="user-pw2-email">
+                    
+                </div>
+                
+                <div class="username-create-container">
+                    
+                    <label for="" class="user-name-text"> Address </label>
+                    <textarea name="address"></textarea>  
+                </div>
+                <div class="user-malefemale-container">
+                    
+                    
+                    <div class="user-name-text-container">
+                        <p class="user-name-text"> Gender </p>
+                        
+                    </div>
+                    <div class="user-male-container">
+                        <input type="radio" class="male_checked" name="gender" value="Male">
+                        <label for=""> Male </label>
+                        
+                    </div>
+                    <div class="user-female-container">
+                        
+                        <input type="radio" class="female_checked" name="gender" value="Female">
+                        <label for=""> Female </label>
+                        
+                    </div>
+
+                    <div class="user-female-container">
+                        
+                        <input type="radio" class="female_checked" name="gender" value="Non-Binary">
+                        <label for=""> Non-Binary </label>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="birthday-create-container">
+                    
+                    <div class="birday-text">
+                        <label for="" class="user-name-text"> Age </label>
+                        
+                        
+                    </div>
+                    
+                    <div class="birday-choice">
+                        
+                        Age: <select name="age" required title="need to be filled">
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                        </select>
+                        
+                    </div>
+                    
+                </div>
+    
+                <div class="fin-join-container">
+                    
+                    <button class="fin-join-button" onclick="submitInfo()"> Done </button>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+</div>
+
+</div>
+</form>
         </main>
     </body>
 </html>
+
