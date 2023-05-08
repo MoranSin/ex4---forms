@@ -6,7 +6,7 @@
   
   body {
     font-family: Itim;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
   }
   
@@ -18,6 +18,21 @@
     position: fixed;
 }
   
+#background-music{
+  position: absolute;
+  display: flex;
+  left: 100px;
+  top: 100px;
+  width: 100px;
+}
+
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-timeline {
+  display: none;
+}
   
   
   .backgroundImage-container {
@@ -683,6 +698,10 @@
     position: relative;
     top:65px;
     color: rgba(255, 255, 255, 0.904);
+  }
+
+  .error{
+    outline-color: red;
   }
   
   

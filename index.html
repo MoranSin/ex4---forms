@@ -17,12 +17,10 @@
             <form action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="get" autocomplete="on">
                 <div class="login-background-image-area ">
                     <div class="backgroundImage-container">
-                        <audio id="background-music" autoplay loop> 
+                        <audio id="background-music" autoplay controls> 
                             <source src="Maplestory Theme Music - Intro.mp3">
                         </audio>
-                        
                         <img src="svg/maplesbg_adobe_express.svg">
-                    
                         <div class="tabs">
                             
                             <input id="all" type="radio" name="tab_item" checked>
@@ -43,7 +41,7 @@
                                         <input type="password" placeholder="Password" name="pass" class="pw-input-deco" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                                     </div>
                                     <div class="login-right-area">
-                            <label class="login-button-font">
+                                        <label class="login-button-font">
                                 <input type="submit" value="LOGIN" class="login-button">
                             </label>
                         </div>
@@ -53,20 +51,20 @@
                     
                     <div class="idSave-findIdPw">
                         <div class="idSave_area">
-                            <input type="checkbox" name="interests[]"  value="video games">
+                            <input type="checkbox"  class="error" name="interests[]" required value="video games">
                             <label for="">
                                 <h2>Easy</h2>
                             </label>
                         </div>
                         <div class="findId_area">
-                            <input type="checkbox" name="interests[]"  value="Maple">
+                            <input type="checkbox" name="interests[]" required value="Maple">
                             <label for="">
                                 <h2>Hard</h2>
                             </label>
                         </div>
                         
                         <div class="findPw_area">
-                            <input type="checkbox" name="interests[]"  value="Story">
+                            <input type="checkbox" name="interests[]"  required value="Story">
                             <label for="">
                                 <h2>Pro</h2>
                             </label>
@@ -116,7 +114,7 @@
                     <div class="userid-photo-container">
                         
                         <div class="userid-photo-content">
-                            <iframe class="userid-photo-content" src="https://giphy.com/embed/9VvlHYBpcRadeNDCCa" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                            <img src="svg/giphy.gif" alt="" class="userid-photo-content">
                         </div>
                         
                     </div>

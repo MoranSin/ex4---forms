@@ -8,19 +8,4 @@ function popupCreateId() {
     popupCreate.classList.add("is-active");
   }
 }
-
-
-$("document").ready(function(){
-    $('form').on('submit',function(event){
-        debugger;
-        let checkedBoxes = $('input[type=checkbox]:checked').length;
-        let errorMsg = $("nerrorMsg");
-            if(checkedBoxes < 3){
-            alert("Please select all difficulties.");
-            event.preventDefault();
-            return false;
-        }
-        return true;
-    })
-})
-
+    
